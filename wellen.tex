@@ -16,5 +16,261 @@
 %----------------------------------------
 
 \chapter{Wellen Optik}
-
-\section{}
+\section{Konstanten}
+\[
+\boxed{\begin{aligned}	
+		&\varepsilon_0 = 8.85\cdot 10^{-12} As/Vm\\
+		&\mu_0 = 4\pi \cdot 10^{-7} Vs/Am\\
+		&n_{Wasser} = 1.3 \\
+		&n_{Glas} = 1.5 \\
+	\end{aligned}}	\]
+\\
+\section{Grundformeln}
+Wellengeschwindigkeit:
+\[
+	v=\sqrt{\frac{F_S}{\mu}}
+\]
+\begin{footnotesize}
+	$\mu$:	Masse pro Meter
+\end{footnotesize}
+\\
+\\
+Harmonische Welle:
+\[
+	\lambda \cdot f = v
+\]
+Wellenzahl:
+\[
+	k=\frac{2\pi}{\lambda}=\frac{\omega}{v}
+\]
+\\
+\section{EM Welle in einem transparenten Material}
+Der Brechungsindex n beschreibt wie sich die Welle in einm transparenten Material fortbewegt.
+\[
+	c_0 \Rightarrow c=  \frac{c_0}{n} \\
+	\lambda_0 \Rightarrow \lambda=  \frac{\lambda_0}{n} \\
+	f \Rightarrow  konstant\\
+\]
+\\
+\section{Dopplereffekt (Optik)}
+Da eine EM Welle kein Medium braucht für die Fortbewegung, ist beim EM Dopplereffekt nur die relative Geschwindigkeit v zwischen Sender und Empfänger relevant.
+\[
+	f^`=f\cdot\sqrt{\frac{c-v}{c+v}}
+\]
+\\
+\begin{footnotesize}
+	v ist positiv bei Entfernung \\
+	v ist negativ bei Annäherung \\
+\end{footnotesize}
+\\
+\section{Reale Welle und komplexe Darstellung}	
+Die komplexe Darstellung des E-Feld wird gewählt, weil die Berechnungen oft einfacher sind, insbesondere bei der Superposition (Additon) von Feldern und der Berechnung der Leistung.
+\[
+	E(x,t)=E_0\cdot e^{i(kx-\omega t +\phi_0)}
+\]
+\\
+\section{Vergleich des E-Felds an zwei Punkten}
+Positionsvergleich:
+\[
+	E(x+\Delta x,t)=E(x,t)\cdot e^{ik \Delta x}	
+\]
+Zeitvergleich:
+\[
+	E(x,t+\Delta t)=E(x,t)\cdot e^{-ik \Delta t} 
+\]
+Phasenverschiebung:
+\[
+	E(x_1,t_1)= E_0\cdot e^{i(kx_1-\omega t_1+\phi_0)}=E_0  \cdot e^{i\phi_1}
+\]
+\[
+	E(x_2,t_2)= E_0\cdot e^{i(kx_2-\omega t_2+\phi_0)}=E(x_1,t_1)  \cdot e^{i\Delta \phi_1}
+\]
+\\
+\section{Intensität einer EM Welle}
+\[
+	I=\frac{Leistung}{Fläche}=\frac{P}{A}=\frac{1}{2}\cdot nc_0\varepsilon_e |E_0|^2 
+\]
+\\
+\[
+	B_0\cdot e^{i(kx-\omega t)}\cdot (-i\omega) = 	
+	E_0\cdot e^{i(kx-\omega t)}\cdot (ik)
+\]
+\[
+	B_0=E \frac{k}{\omega}=E\frac{1}{c}
+\]
+\\
+\begin{footnotesize}
+	$c_0$:	Lichtgeschwindigkeit im Vakuum \\
+	$n$:	Brechungsindex\\
+	$\varepsilon_0$:	Dielektrizitätskonstante
+\end{footnotesize}
+\\
+\section{Interferenz}
+\begin{itemize}
+	\item Konstruktive Interferenz: $\Delta\varphi=0$
+	\item Destruktive Interferenz:  $\Delta\varphi=\pi$\\
+\end{itemize}
+Für Interferenzen zu addieren werden sie zuerst in das E-Feld zurück gerechnet.
+\\
+\\
+Zeigerdiagramm:
+\[
+	E_{tot}(x,t)=E_{1,0}\cdot e^{i\phi_1}+E_{2,0}\cdot e^{i\phi_2}= (E_{1,0}+E_{2,0}\cdot e^{i\Delta\phi})\cdot e^{i(kx-\omega t)}
+\]
+\[
+	I_{tot}= \frac{1}{2}nc_0\varepsilon_0|E_{tot}|^2 =
+	\frac{1}{2}nc_0\varepsilon_0|E_{1,0}+E_{2,0}\cdot e^{i\Delta \phi}|^2
+\]
+Phasenverschiebung:
+\[
+	\Delta\varphi=\varphi_2-\varphi_1= 
+	\Delta L k_0+k_2L_2-k_1L_1 
+\]
+\begin{center}
+	\includegraphics[scale = 0.2]{images/phasenverschiebung.jpg}
+\end{center}
+\begin{footnotesize}
+	$k_0=\frac{2\pi}{\lambda_0}$\\
+	$k_1=\frac{2\pi}{\lambda_0} n_1$\\
+\end{footnotesize}
+\\
+\section{Reflexion und Transmission}
+Energieerhaltung:
+\[
+	I_0=I_r+I_t \\ \Rightarrow \\ n_1 E_0^2= n_1 E_r^2+ n_2 E_t^2 \\ \\
+\]
+Definition:	
+\[
+	E_r=r\cdot E_0 \\ \Rightarrow \\ E_t=t\cdot E_0 \\
+	\Rightarrow \\ 1+r=t\\
+\]
+Reflexions- und Transmissionskoeffizienten:
+\[
+	r= \frac{n_1-n_2}{n_1+n_2} \\ \Rightarrow \\ 
+	t= \frac{2n_1}{n_1+n_2} 	\\ \\ \\
+\]
+\[
+	I_r=|r|^2\cdot I_0  \\ \Rightarrow \\ 
+	I_t=\frac{n_2}{n_1}|t|^2\cdot I_0 \\ \\
+\]
+\begin{itemize}
+	\item $n_1 < n_2$: Reflektierte Welle erfährt einen Phasensprung von $\pi$, bzw. $\lambda/2$
+	\item$n_1 > n_2$: Reflektierte Welle erfährt keinen Phasensprung \\
+\end{itemize}
+\
+\section{Dünnfilm-Interferenz}
+Bedingung reduzierte Reflexion:
+\[
+	d=m\frac{\lambda_0}{2n} \\ m=1,2,.. \\ \\
+\]
+Bedingung verstärkte Reflexion:
+\[
+	d=\frac{\lambda_0}{4n}+m\frac{\lambda_0}{2n} \\ m=0,1,..\\ \\
+\]
+\begin{center}
+	\includegraphics[scale = 0.2]{images/df_interferenz.jpg}
+\end{center}
+Die Reflexion beim Übergang zwischen zwei Medien mit Brechungsindizes $n_1$ und $n_2$ kann mit einer zusätzlichen Antireflexions-Dünnschicht reduziert werden. \\
+$n_1< n_{AR}<n_2$ \\
+\\
+Schichtdicke $\frac{\lambda}{4 n_{AR}}$
+\\
+\\
+Idealer Brechungsindex:
+\[
+	 n_{AR}^2=n_1\cdot n_2
+\]
+\\
+\section{Fabry-Perot Interferometer}
+Das Fabry-Perot Interferometer (Etalon) besteht aus zwei parallelen, reflektierenden Oberflächen in einem festen Abstand d mit einer Reflexion R<100. 
+\\
+\\
+\textbf{ under construction}
+\\
+\section{Beugung am Spalt}
+\[
+	\sin\alpha_{min}=m\cdot \frac{\lambda}{D} \\
+	\sin\alpha_{max}=(m+\frac{1}{2})\cdot \frac{\lambda}{D}	
+\]
+Für kleine Beugungswinkel gilt:
+\[
+	x_{min}=m\cdot\frac{\lambda}{D}L\\
+	x_{max}=(m+\frac{1}{2})\cdot\frac{\lambda}{D}L\\ \\
+	m=1,2,3...
+\]
+\begin{center}
+	\includegraphics[scale = 0.3]{images/beugung_spalt.jpg}
+\end{center}
+Auflösungsvermögen Mikroskopie
+\[
+	\Delta l=1.22 \frac{f\lambda}{D}
+\]
+\begin{footnotesize}
+	$f$:	Brennweite der Linse \\
+	$D$:	Durchmesser der Linse\\
+\end{footnotesize}
+\\
+\section{Beugung am Gitter}
+Wenn Licht auf eine periodische Anordnung von Streukörpern trifft, können die Elementarwellen, die von den Streukörpern ausgehen in bestimmte Richtungen konstruktiv interferieren und ein Beugungsmuster generieren.
+\[
+	\sin \varphi_{max}=m\frac{\lambda}{a} \\
+	x_{max}=m\frac{\lambda}{a}L \\
+	m=1,2,...
+\]
+\begin{center}
+	\includegraphics[scale = 0.25]{images/beugung_gitter.jpg}
+\end{center}
+\
+\section{Polarisation}
+\[
+	E_t=E_0\cdot \cos\Delta\varphi \\
+	I_t= I_0\cdot\cos^2(\Delta\varphi)
+\]
+Polarisationsgrad:
+\[
+	PG= \frac{P_{max}-P_{min}}{P_{max}+P_{min}}
+\]
+\\
+\section{Transmission und Reflexion (Fresnell)}
+\textbf{under construction}
+\\
+\section{Absorption}
+Viele Materialien absorbieren einen Teil des Lichtes. Die Absorption hängt von der Wellenlänge ab und ist oft charakteristisch für ein Material.
+\[
+	I(d)=I_0\cdot 10^{-\alpha d} \\
+	I(d)=I_0\cdot e^{-\alpha^* d} \\
+	I(d)=I_0 \cdot 10^{\frac{-\alpha^` d}{10}}
+\]
+\[
+	Chemiker \\ \\
+	Physiker \\ \\ \\
+	Optischer Ingenieur
+\]
+\begin{footnotesize}
+	$\alpha^`$	in dB/m \\
+\end{footnotesize}
+\\
+\section{Intensität Gauss Strahl}
+Die Intensität quer zur Strahlrichtung hat die Form einer Gauss Kurve. Im Abstand r=W von der z-Achse fällt die Intensität auf 13.5\% $(e^-2)$ ab.
+\[
+	I(r,z)=\underbrace{I_0 \left(\frac{W_0}{W(z)}\right)^2}_{I(0,z)} 
+	\cdot \underbrace{e^{-\frac{2r^2}{W(z)^2}}}_{Querschnittsprofil} 
+\]
+Strahlradius W(z):
+\[
+	W(z)=W_0\sqrt{1+\left( \frac{z}{z_0}\right) ^2}
+\]
+Mit $\pm z_0$ wird der Rayleigh Bereich (Tiefenschärfe) bezeichnet.
+\[
+	2z_0=\frac{2\pi W_0^2}{\lambda}
+\]
+Öffnungswinkel:
+\[
+	\theta_0 \approx \tan \theta_0 = \frac{\lambda}{\pi W_0} \\ \text{in rad } \\ \\
+\]
+\\
+Gauss Strahlen:
+\[
+	W_{FWHM}(z)=1.18\cdot W(z) \\
+	\theta_{FWHM} = 1.18 \cdot\theta_0 \\ \\
+\]
