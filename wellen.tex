@@ -274,3 +274,123 @@ Gauss Strahlen:
 	W_{FWHM}(z)=1.18\cdot W(z) \\
 	\theta_{FWHM} = 1.18 \cdot\theta_0 \\ \\
 \]
+\\
+\section{Kollimierter Gauss Strahl}
+Ein Strahl heisst kolimiert/gebündelt, wenn die Divergenz sehr klein ist. Man bezeichnet einen Strahl auch als kollimiert, wenn der Rayleigh Bereich des Strahls ungefähr gleich gross ist wie die relevante Propagationsdistanz der Anwendung.\\
+\\
+\[
+	W_0^`=\frac{\lambda\cdot f}{f\cdot W_0} \geq
+	 \frac{2\lambda\cdot f}{\pi\cdot D} 
+	 \equiv \frac{2\lambda}{\pi} F_{N}
+\]
+\[
+	\frac{W_0}{W_0^`}=	\frac{f_1}{f_2^`}
+\]
+\begin{center}
+	\includegraphics[scale = 0.25]{images/koll_gauss_strahl.jpg}
+\end{center}
+\
+\\
+\section{Wellenleiter}
+\subsection{Metall-Wellenleiter}
+Als einfachstes System eines Wellenleiters kann man zwei parallele metallene Oberflächen (Spiegel) nehmen.\\
+\\
+\textbf{Bedingung:} Wellenfronten von Reflexionen in die gleiche Richtung interferieren konstruktiv.\\
+\\
+\[
+	\sin \theta_m= \frac{m \cdot \lambda}{2d}\\
+	m=1,2,3,... \\ \\
+\]
+\\
+Da der sinus maximal 1 sein kann, gibt es eine maximale Anzahl Moden:
+\[
+	M\leq\frac{2d}{\lambda}
+\]
+\[
+	\lambda_c=2d
+\]
+wenn $\lambda> \lambda_c$ kann sich das Licht in dieser Art Wellenleiter nicht fortbewegen.\\
+\
+\[
+	v_m=c\cdot \cos\theta_m=c\sqrt{1-m^2\cdot\frac{\lambda^2}{\lambda_c^2}}
+\] 
+\begin{center}
+	\includegraphics[scale = 0.3]{images/wellenleiter.jpg}
+\end{center}
+\
+\\
+\subsection{Dielektrische planare Wellenleiter}
+Ein dielektrischer Wellenleiter besteht aus einem Kern und einem Mantel mit unterschiedlichen Brechungsindizes. Wenn \textbf{$n_1>n_2$} gibt es innerhalb eines Winkelbereichs Totalrefelxion und die Struktur funktioniert als Wellenleiter.\\
+\\
+\[
+	\cos \bar{\theta_c}=\frac{n_2}{n_1}
+\]
+\[
+	\tan (\pi \frac d\lambda \cdot\sin \theta_m-m\frac{\pi}{2})=
+	\sqrt{\frac{\sin^2 \bar{\theta_c}}{\sin^2\theta_m}-1} \\
+	m=1,2,3,.. 
+\]
+\\
+Wie bei den metallischen gibt es zu jedem $\theta_m$ eine Mode, die propagieren. Die Anzahl der Moden ist durch $\theta_c$ beschränkt und beträgt: \\
+\[
+	M \dot{=} \frac{2d\cdot\sin \bar{\theta}_c}{\lambda} \\
+	\dot{=}\frac{2d}{\lambda_0}\cdot NA\\ \\ \\ \\
+	\dot{=}\rightarrow \text{nächst grössere ganze Zahl}
+\] 
+\[
+	NA=\sqrt{n_1^2-n_2^2}=n_1\cdot \sin \bar{\theta_c}
+\]
+\begin{center}
+	\includegraphics[scale = 0.2]{images/dielektrische_WL.jpg}
+\end{center}
+\
+\begin{footnotesize}
+	$NA:$	Numerische Aperatur \\
+\end{footnotesize}
+\
+\\
+\subsection{Modenprofil}
+Die Eindrinktiefe nimmt mit der Modenzahl zu.\\
+\[
+	\delta_m=\frac{\lambda_0}{n_2 \cdot 2\pi}\left( \frac{\cos^2\theta_m}{\cos^2 \bar{\theta_c}} -1  \right)^{-\frac{1}{2}}
+\]
+\\
+Im Unterschied zum metallenen Wellenleiter gibt es im dielektrischen immer eine Mode, selbst für sehr kleine $d$. Zu jeder Dicke gibt es jedoch einen cut-off Frequenz, unterhalb derer der Wellenleiter nur eine Mode zulässt.\\
+\[
+	f_c=\frac{c}{NA\cdot 2d}
+\]
+\\
+Single mode wenn:
+\[
+	f<f_c \\
+	\lambda > \lambda_c=2d\cdot NA
+\]
+\begin{center}
+	\includegraphics[scale = 0.2]{images/modenprofil.jpg}
+\end{center}
+\
+\section{Optische Fasern}
+\subsection{Singlemodefaser}
+Optische Fasern bestehen aus einem Kern und einem Mantel mit unterschiedlichen Brechungsindizes. Es gibt Moden, deren Anzahl durch den Durchmesser des Kerns gegeben ist.\\
+\\
+Um einen geringen Verlust zu erlangen, muss der Strahldurchmesser dem Modeprofil entsprechen und die Strahldivergenz muss kleiner sein als:\\
+\[
+	\sin \theta_a=NA=\sqrt{n_1^2-n_2^2}
+\]
+Single Mode kann nur der Grundmode (m=0) propagieren für die Frequenzen unterhalb der cut-off Frequenz.
+\[
+	f_c=\frac{c}{NA\cdot 2.61a}
+\]
+\begin{footnotesize}
+	$a:$	Kernradius \\
+\end{footnotesize}
+\\
+\begin{center}
+	\includegraphics[scale = 0.15]{images/opt_faser.jpg}
+\end{center}
+\
+\subsection{Multimodefaser}
+Für Fasern mit grossem Kernradius a gilt:
+\[
+	M\approx \left( \frac{4a}{\lambda_0} \cdot NA \right)^2 
+\]
