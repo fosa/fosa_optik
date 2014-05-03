@@ -279,7 +279,7 @@ Gauss Strahlen:
 Ein Strahl heisst kolimiert/gebündelt, wenn die Divergenz sehr klein ist. Man bezeichnet einen Strahl auch als kollimiert, wenn der Rayleigh Bereich des Strahls ungefähr gleich gross ist wie die relevante Propagationsdistanz der Anwendung.\\
 \\
 \[
-	W_0^`=\frac{\lambda\cdot f}{f\cdot W_0} \geq
+	W_0^`=\frac{\lambda\cdot f}{\pi\cdot W_0} \geq
 	 \frac{2\lambda\cdot f}{\pi\cdot D} 
 	 \equiv \frac{2\lambda}{\pi} F_{N}
 \]
@@ -393,4 +393,38 @@ Single Mode kann nur der Grundmode (m=0) propagieren für die Frequenzen unterha
 Für Fasern mit grossem Kernradius a gilt:
 \[
 	M\approx \left( \frac{4a}{\lambda_0} \cdot NA \right)^2 
+\]
+\\
+\section{Schwarzkörper-/Thermische Strahlung}
+\textbf{Lord Rayleigh's} Berechnung beschreiben das Emissionsverhalten eines Schwarzkörpers für grosse Wellenlänge.\
+\[
+	K(\lambda,T)=2c \cdot k_B\cdot \frac{T}{\lambda^4}
+\]
+\textbf{Stefan-Boltzmann's} Formel beschreibt für das gesamte Emissionsvermögen des schwarzen Körper.\
+\[
+	R(T)=\sigma \cdot T^4 
+	\\ \left[ R\right]  =\frac{W}{m^2} \\ \\
+\]
+\begin{footnotesize}
+	$\sigma:$	$5.67040 \cdot 10^{-8} \frac{W}{m^2\cdot K^4}$ \\
+\end{footnotesize}
+\\
+Die effektiv abgestrahlte Leistung eines realen Körpers mit Temperatur $T_1$ in einer Umgebung mit Temperatur $T_2$.\
+\[
+	\Delta P = \varepsilon \sigma A\cdot (T_1^4-T_2^4)
+\]
+\begin{footnotesize}
+	$\varepsilon:$	Beschreibt die prozentuale Fläche unter der Kurve. \\
+\end{footnotesize}
+\\
+\subsection{Wiensche Verschiebungsgesetz}
+Verschiebungsgesetz von Wien für das Emissionsmaximum eines schwarzen Körpers als Funktion der Temperatur.\
+\[
+	\lambda_{max} \cdot T = 2.898 \cdot 10^{-3}m\cdot K
+\]
+\\
+\section{Zeitliche Kohärenz}
+Tie Kohärenzzeit $T_c$ ist gekoppelt mit der Breite des Spektrums $\Delta f$.\
+\[
+	\Delta f \approx \frac{1}{\pi\cdot \tau_c}
 \]
