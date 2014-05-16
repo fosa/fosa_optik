@@ -23,6 +23,7 @@
 		&m_e = 9.1094\cdot 10^{-31}kg \\
 		&k_B = 1.380658 \cdot 10^{-23} \frac{J}{K}\\
 		&eV = 1.602176565 \cdot 10^{-19}J\\
+		&\hbar = \frac{h}{2\pi}
 	\end{aligned}}	\]
 \\
 \section{Grundformeln}
@@ -48,7 +49,7 @@ Die maximale kinetische Energie nimmt linear mit der Frequenz des Lichts zu. Es 
 Obwohl das Photon keine Ruhemasse besitzt, hat es trotzdem einen Impuls. Die Relativitätstheorie liefert für das Photon mit Wellenlänge $\lambda$ den Impuls $p$:\
 
 \[
-	p=\frac{E}{c}=\frac{h\cdot f}{c}= \frac{h}{\lambda} \\ \text{pro Photon} \\ \\
+	p=\frac{E}{c}=\frac{h\cdot f}{c}= \frac{h}{\lambda}=m\cdot v \\ \text{pro Photon} \\ \\
 \]
 Energie- und Impulserhaltung liefern:
 \[
@@ -66,6 +67,13 @@ Anzahl Photonen pro Sekunde:
 In einer Röntgenröhre werden Elektronen von einer geheizten  Kathode auf die Anode beschleunigt. Maximale Frequenz (kleinste Wellenlänge) kann ein Bremstrahlungs-Photon erreichen, wenn es die ganze kinetische Energie des Elektrons schluckt.\
 \[
 	q_e\cdot V_{AC} = h\cdot f_{max} = \frac{h\cdot c}{\lambda_{max}}=\frac{\Delta E}{h\cdot c}
+\]
+\\
+\section{Energie}
+In einem elektrischen Spannungsfeld, entspricht die Differenzspannung der Energie auf ein Elektron.\\
+zB. 100V $\rightarrow$ 1 Elektron $\rightarrow$ 100eV
+\[
+	E= \frac{1}{2}\cdot m_0  v^2 = \frac{1}{2} \frac{p^2}{m_E}=\frac{p^2}{2m}
 \]
 \\
 \section{Energieniveaus von Wasserstoff}
@@ -160,3 +168,55 @@ Die Maxwell-Boltzmann-Verteilung der Geschwindigkeiten in einem Gas bei der Temp
  \begin{center}
  	\includegraphics[scale = 0.2]{images/verschraenkung_photon.jpg}
  \end{center}
+ \
+ \\
+ \section{Schrödingergleichung - Wellenfunktion}
+ Schrödinger Gleichung:
+ \[
+ 		i\hbar \dfrac{\partial\psi(x,t)}{\partial t}=
+ 		U(x)\cdot\psi(x,t)-\frac{\hbar^2}{2m}\frac{\partial^2\psi(x,t)}{\partial x^2}
+ \]
+ U ist eine (klassische) potentielle Energiefunktion, beispielweise die Coulombenergie eines Elektrons im Wasserstoffatom.\\
+ \\
+ \begin{footnotesize}
+  	$\hbar$=	$\frac{h}{2\pi}$\\
+  	$h$= $6.62606872\cdot 10^{-34}$\\
+  \end{footnotesize}
+  \
+  \\
+  Die Coulomb-Energie des Elektron um den Wasserstoffkern (=Proton):
+  \[
+  		U_{H-Atom}=-\frac{1}{4\pi\varepsilon_0}\cdot\frac{q_e^2}{r}
+  \]
+  Die potentielle Energie der Hooke'sche Feder (=harmonische Oszillator):
+  \[
+  		U_{harm. Oszillator}=\frac{1}{2}\cdot kx^2
+  \]
+  \\
+  \section{Interferenz $\rightarrow$ Unschärferelation}
+  Nach klassicher Interferenz gilt folgende Beziehung zwischen Winkelablenkung $\theta_1$, Wellenlänge $\lambda$ und Spaltöffnung $a$:\
+  \[
+  		\sin\theta_1\approx \theta = \frac{\lambda}{a}
+  \]
+   \begin{center}
+   	\includegraphics[scale = 0.2]{images/unschaerferelation.jpg}
+   \end{center}
+  Je kleiner die Wellenlänge $\lambda$, desto schärfer ist das Hauptmaximum. Oder je grösser der Spalt a, desto kleiner die Winkelbeugung.\\
+  \\
+  Die $y$-Beschränkung des Elektrons innerhalb $a$ erzeugt einen y-Querimpuls.
+  \[
+  		\underbrace{\Delta p_y=p_y}_{\text{Def. von $\Delta p_y$}}=
+  		\underbrace{\tan\theta_1\cdot p_x \approx \theta_1\cdot p_x= \frac{\lambda}{a}\cdot p_x}_{\text{Beugung am Spalt}}=
+  		\underbrace{\frac{\lambda}{a}\cdot\frac{h}{\lambda}}_{\text{De Broglie}}\equiv
+  		\frac{\lambda}{\Delta y}\cdot\frac{h}{\lambda}
+  		\rightarrow \Delta p_y\cdot\Delta y = h
+  \]
+\\
+Heisenberg'sche Unschärferelation:
+\[
+	\Delta x \cdot \Delta p_x \geq \frac{h}{\pi}= \frac{\hbar}{2}	
+\]
+ebenso:
+\[
+	\Delta y \cdot \Delta p_y \geq \frac{\hbar}{2}	\\ \Delta z \cdot \Delta p_z \geq \frac{\hbar}{2} \\ \\
+\]
